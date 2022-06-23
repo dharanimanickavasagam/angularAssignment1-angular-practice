@@ -34,7 +34,7 @@ export class SuccessAlertComponent implements OnInit {
   }
 
   getServerStatusClasses = () => {
-      return {online :this.serverStatus == 'online'  };
+    return {online: this.serverStatus == 'online'};
   }
 
   alertStatus = (): void => {

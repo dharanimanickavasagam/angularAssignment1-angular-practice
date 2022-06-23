@@ -1,0 +1,9 @@
+<button (click)="getDisplayDetails()" [innerText]="getButtonName()"> Display Details</button>
+<p *ngIf="displayDetails"> Hello there, You clicked the button to show some details ! </p>
+
+<div> Button Log events</div>
+<div *ngFor="let buttonClick of buttonClickLogger; let indexValue = index" [ngStyle]="getLoggerStyles(indexValue)"
+     [ngClass]="getLoggerClassNames(indexValue)">
+  This is Click {{ indexValue }} - {{ buttonClick }}
+</div>
+
