@@ -1,0 +1,14 @@
+<div class="flex">
+  <label> Enter a username </label>
+  <input type="text" [(ngModel)]="userName"/>
+  <button (click)="addUserName()" [disabled]="isButtonEnabled()"> Add username</button>
+  <button (click)="resetUserName()" [disabled]="isButtonEnabled()"> Reset username</button>
+</div>
+
+<p *ngIf="userCreated; else noUserCreated"> Created new user with name {{ userName }}</p>
+<ng-template #noUserCreated>
+  <p> No new username is created !</p>
+</ng-template>
+
+<div *ngFor="let user of existingUsers"> <app-server> </app-server> </div>
+

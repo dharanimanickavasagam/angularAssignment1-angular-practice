@@ -1,0 +1,25 @@
+<p class="text" [ngStyle]="getServerStatusStyles()" [ngClass]="getServerStatusClasses()"> The Server with ID {{ serverID}} is at the status {{ serverStatus }} </p>
+
+
+<label> Event Binding - Enter Server Name </label>
+<div class="flexColumn">
+  <input type="text" (input)="onInputChange($event)"/>
+  <label> Entered value : {{ serverName }} </label>
+  <hr>
+
+  <label> Two way data binding - Enter Server Name </label>
+  <input type="text" [(ngModel)]="serverName2"
+  />
+  <label> Entered value : {{ serverName2 }} </label>
+</div>
+
+<hr>
+
+<div class="flex">
+  <button (click)="alertStatus()"> Click me for Success</button>
+  <button [disabled]="!enableAddServerButton" (click)="addNewServer()"> Add Server</button>
+</div>
+<hr>
+
+
+<p [innerText]="serverCreationStatus"></p>

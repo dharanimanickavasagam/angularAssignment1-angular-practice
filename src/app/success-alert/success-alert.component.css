@@ -1,0 +1,19 @@
+.text {
+  color: green
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.online {
+  background-color: darkseagreen;
+  padding: 20px;
+}
+
